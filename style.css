@@ -190,18 +190,26 @@ section {
     font-size: 1.5em;
     margin-bottom: 5px;
 }
+#members-section {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+#members-section h2, #members-section ul {
+    text-align: center;
+}
+
+/* Styles for Helper Section */
 #helper-section {
-    background-color: #87CEEB; /* Sky Blue Color */
-    color: #fff; /* White Text Color */
     padding: 40px 20px;
     text-align: center; /* Center the text */
-    border-radius: 8px;
     margin: 20px 0;
 }
 
-#helper-section h2 {
-    margin-bottom: 20px;
+#helper-section .cyan-text {
+    color: #00FFFF; /* Cyan Color */
     font-size: 24px;
+    font-weight: bold;
 }
 
 #helper-section p {
@@ -209,7 +217,6 @@ section {
     font-size: 18px;
     line-height: 1.6;
 }
-
 footer {
     background-color: #111;
     color: white;

@@ -69,17 +69,94 @@
     </section>
 
     <!-- Applications Section -->
-    <section id="applications" class="applications-section">
-        <div class="container">
-            <h2 class="section-title">Applications</h2>
-            <ul>
-                <li>Controlled by ESP32</li>
-                <li>Can be controlled by gestures</li>
-                <li>AI Assistant</li>
-                <li>Work can be simpler</li>
-            </ul>
+<section id="applications" class="applications-section">
+    <div class="container">
+        <h2 class="section-title">Applications</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Controlled by ESP32</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p>This application utilizes the ESP32 microcontroller for various functionalities, enabling efficient control of the humanoid robot.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Gesture Control</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p>The robot can be operated through gesture recognition, allowing intuitive interaction with users.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>AI Assistant</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p>Integrated AI features enable the robot to function as a personal assistant, capable of handling various tasks.</p>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <h3>Simplifying Work</h3>
+                    <span class="arrow">➕</span>
+                </div>
+                <div class="accordion-content">
+                    <p>By automating repetitive tasks, the humanoid robot simplifies work processes and enhances productivity.</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- JavaScript for Accordion Functionality -->
+<script>
+    function toggleAccordion(header) {
+        const content = header.nextElementSibling;
+        const arrow = header.querySelector('.arrow');
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            arrow.textContent = "➕";
+        } else {
+            content.style.display = "block";
+            arrow.textContent = "➖";
+        }
+    }
+</script>
+
+<!-- CSS for Accordion -->
+<style>
+    .accordion {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .accordion-item {
+        border-bottom: 1px solid #ccc;
+    }
+    .accordion-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #f1f1f1;
+        border-radius: 5px;
+    }
+    .accordion-header:hover {
+        background-color: #e1e1e1;
+    }
+    .accordion-content {
+        display: none;
+        padding: 10px;
+        background-color: #fff;
+    }
+</style>
+
 
     <!-- Team Section -->
     <section id="team" class="team-section">
